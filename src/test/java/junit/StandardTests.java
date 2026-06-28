@@ -9,12 +9,17 @@ public class StandardTests {
 
     @BeforeAll
     static void initAll() {
+        System.out.println("before all");
     }
     @BeforeEach
     void init() {
+        System.out.println("before each");
+
     }
     @Test
     void succeedingTest() {
+        System.out.println("succeed");
+
     }
     @Test
     void failingTest() {
@@ -23,7 +28,8 @@ public class StandardTests {
     @Test
     @Disabled("for demonstration purposes")
     void skippedTest() {
-        // not executed
+        System.out.println("disable");
+
     }
     @Test
     void abortedTest() {

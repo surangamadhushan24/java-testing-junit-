@@ -24,4 +24,8 @@ public class AssertJAssertionsDemo {
                 .usingRecursiveComparison()
                 .isEqualTo(person2);
     }
+    @Test
+    void booleanAssertion(){
+        assertThat("".isEmpty()).isTrue();
+    }
 }

@@ -15,7 +15,6 @@ public class DisplayNameDemo {
     }
     @Test
     @DisplayName("😂😂😘")
-
     void testWithDisplayNameContainingEmoji() {
     }
 }

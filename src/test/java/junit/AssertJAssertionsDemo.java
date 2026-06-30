@@ -2,6 +2,9 @@ package junit;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.Arrays;
+import java.util.List;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 
@@ -27,5 +30,23 @@ public class AssertJAssertionsDemo {
     @Test
     void booleanAssertion(){
         assertThat("".isEmpty()).isTrue();
+    }
+
+    @Test
+    void iterableAssertion(){
+          List<String> list = Arrays.asList("1", "2", "3");
+//        assertThat(list).contains("1");
+//        assertThat(list).isNotEmpty();
+//        assertThat(list).startsWith("1");
+//        assertThat(list).doesNotContainNull();
+
+        assertThat(list)
+                .isNotEmpty()
+                .contains("1")
+                .startsWith("1")
+                .doesNotContainNull();
+
+
+
     }
 }

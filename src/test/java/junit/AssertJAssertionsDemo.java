@@ -45,8 +45,14 @@ public class AssertJAssertionsDemo {
                 .contains("1")
                 .startsWith("1")
                 .doesNotContainNull();
+    }
 
-
+    @Test
+    void characterAssertion(){
+        char someCharacter = 'a';
+        assertThat(someCharacter)
+                .isNotEqualTo('b')
+                .isLowerCase();
 
     }
 }

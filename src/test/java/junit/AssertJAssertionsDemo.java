@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -53,6 +54,13 @@ public class AssertJAssertionsDemo {
         assertThat(someCharacter)
                 .isNotEqualTo('b')
                 .isLowerCase();
+    }
 
+    @Test
+    void classAssertion(){
+        //assert that class Runnable is an interface
+        assertThat(Runnable.class).isInterface();
+        //one class is assignable from the other
+        assertThat(Exception.class).isAssignableFrom(NoSuchElementException.class);
     }
 }
